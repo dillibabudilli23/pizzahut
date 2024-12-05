@@ -1,0 +1,15 @@
+{% extends 'pizza/base.html' %}
+{%block 'body' %}
+{% load widget_tweaks %}dilli
+  <h1>Order pizza</h1>
+<h2>{{ note }}</h2>
+{% if created_pizza_pk %}
+<a href="{%url 'edit' created_pizza_pk %}">Edit Order</a>
+{% endif %}
+<form action="{% url 'order' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Order pizza">
+</form>
+
+{% endblock %}
