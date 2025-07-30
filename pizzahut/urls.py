@@ -27,4 +27,4 @@ urlpatterns =[
     path('order',pizza.views.order,name='order'),
         path('pizzas',pizza.views.pizzas,name='pizzas'),
     path('edit/<int:pk>',pizza.views.edit,name='edit'),
-    ]
+]
