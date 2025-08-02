@@ -14,7 +14,6 @@ def order(request):
     else:
         return render(request, 'pizza/order.html', {'form': form})
 
-
 def pizzas(request):
     multiple_pizza_form = MultiplePizzaForms()  #empty form
     created_pizza_pk =None
@@ -48,3 +47,4 @@ def edit(request,pk):
         else:
             note = 'Try again'
     return render(request,'pizza/edit.html', {'form': form, 'pk': pk})
+
